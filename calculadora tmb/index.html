@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gasto Calórico (TMB)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="carrossel">
+        <div class="slides">
+            <img src="./imagens/academia-imc.png" alt="Imagem 1 saudável" />
+            <img src="./imagens/academia-imc3.png" alt="Imagem 2 saudável" />
+            <img src="./imagens/alimentaçao-saudavel.png" alt="Imagem 3 saudável" />
+            <img src="./imagens/hidatraçã-imc.png" alt="Imagem 4 saudável" />
+            <img src="./imagens/musculacao-imc.png" alt="Imagem 5 saudável" />
+        </div>
+    </div>
+        <header class="cabecalho">
+        <h1>Calculadora de Gasto Calórico Basal (TMB)</h1>
+    </header>
+    <div class="container">
+        <div class="box esquerda">
+            <form class="formulariocalcular" id="formulariocalcular">
+                <div>
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo">
+                    <option value="masculino">Masculino</option>
+                    <option value="feminino">Feminino</option>
+                    </select>
+                </div>
+
+                <div class="grupo-campos">
+                    <div class="campo">
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" name="idade">
+                    </div>
+                    <div class="campo">
+                    <label for="peso">Peso:</label>
+                    <input type="number" id="peso" name="peso">
+                    </div>
+                    <div class="campo">
+                    <label for="altura">Altura (cm):</label>
+                    <input type="number" id="altura" name="altura">
+                    </div>
+                </div>
+
+                <label for="atividade">Nível de Atividade:</label>
+                <select id="atividade">
+                    <option value="1.2">Sedentário</option>
+                    <option value="1.375">Levemente ativo</option>
+                    <option value="1.55">Moderadamente ativo</option>
+                    <option value="1.725">Muito ativo</option>
+                    <option value="1.9">Extremamente ativo</option>
+                </select>
+
+                <button type="submit">Calcular</button>
+                <div id="resultado"></div>
+            </form>
+
+        </div>
+        <div class="box direita">
+           <a href="#o-que-e"> <h2>O que é Taxa Metabólica Basal?</h2></a> 
+           <a href="#importancia"><h2> Qual é a importância de saber a minha Taxa Metabólica Basal?</h2></a>
+           <a href="#como-usar"><h2>Como usar a Taxa Metabólica Basal para emagrecer?</h2></a>
+           <a href="#calculo"><h2>Como é calculada a Taxa Metabólica Basal?</h2></a>
+           <a href="#calculadora"><h2>Como funciona a calculadora de metabolismo basal?</h2></a>
+           <a href="#Peso-ideal"><h2>O que é peso ideal? </h2></a>
+           <a href="#peso-ideal2"><h2>Já pensou em usar uma calculadora de peso ideal?</h2></a>
+           <a href="#imc-ideal"><h2>Qual a relação do peso ideal com o IMC?</h2></a>
+           
+           <a href=""></a>
+           <a href=""></a>
+           <a href=""></a>
+        </div>
+    </div>
+    <article>
+        <section id="o-que-e">
+            <h2>O que é Taxa Metabólica Basal?</h2>
+            <p>A <strong> Taxa Metabólica Basal (TMB) </strong> é a quantidade mínima de energia necessária para que o seu
+            corpo funcione no dia a dia. Isso inclui funções vitais, como respirar, manter a temperatura do corpo, fazer
+            os
+            batimentos cardíacos e regular a pressão arterial — tudo isso ocorre mesmo quando você está em repouso, como
+            ao
+            dormir.
+
+            Seu corpo obtém essa energia a partir dos alimentos que você consome, principalmente carboidratos, proteínas e
+            gorduras.
+
+            </p>
+        </section>
+
+        <section id="importancia">
+            <h2>Qual é a importância de saber a minha Taxa Metabólica Basal?</h2>
+            <p>Conhecer a sua Taxa Metabólica Basal (TMB) é essencial para entender quantas calorias seu corpo precisa para
+            funcionar adequadamente. Com essa informação, é possível ajustar sua alimentação e rotinas de exercícios,
+            garantindo que você consuma as calorias certas para alcançar seus objetivos — seja para manter o peso,
+            emagrecer
+            ou ganhar massa muscular.
+
+            Com a TMB, você pode calcular a quantidade de calorias que precisa ingerir diariamente para manter sua
+            energia,
+            e isso se torna um ponto de partida para uma alimentação saudável e bem equilibrada.</p>
+        </section>
+
+        <section id="como-usar">
+            <h2>Como usar a Taxa Metabólica Basal para emagrecer?</h2>
+            <p>A Taxa Metabólica Basal (TMB) pode ser um excelente aliado no processo de emagrecimento. Quando você consome
+            menos calorias do que o seu corpo necessita, ocorre o que chamamos de déficit calórico. Esse déficit faz com
+            que
+            o corpo comece a "queimar" gordura armazenada, utilizando-a como fonte de energia.
+
+            Entretanto, é importante que um profissional da saúde, como um nutricionista, desenvolva um plano alimentar
+            com
+            déficit calórico controlado, para garantir que o emagrecimento ocorra de forma saudável e sustentável.</p>
+        </section>
+
+        <section id="calculo">
+            <h2>Como é calculada a Taxa Metabólica Basal?</h2>
+            <p>Existem várias formas de calcular a Taxa Metabólica Basal (TMB), mas as mais comuns envolvem equações
+            baseadas
+            em peso, idade e gênero. Um método amplamente utilizado foi desenvolvido pela Organização Mundial da Saúde
+            (OMS), que oferece um cálculo específico para homens e mulheres:
+
+            Para mulheres (18-30 anos):
+            TMB = (14,818 x peso em kg) + 486,6
+
+            Para homens (18-30 anos):
+            TMB = (15,057 x peso em kg) + 692,2
+
+            Outros métodos incluem a calorimetria, que mede diretamente o gasto de calorias do corpo, e equações
+            preditivas,
+            que consideram também a atividade física.</p>
+        </section>
+
+        <section id="calculadora">
+            <h2>Como funciona a calculadora de metabolismo basal?</h2>
+            <p>Como funciona a calculadora de Metabolismo Basal?
+            A calculadora de metabolismo basal é simples de usar. Você só precisa fornecer alguns dados, como peso, idade
+            e
+            gênero, e ela fornecerá o valor da sua TMB em poucos segundos.
+
+            Ao saber a sua TMB, você pode planejar com mais precisão sua dieta e rotina de exercícios para atingir seus
+            objetivos de saúde.</p>
+        </section>
+
+        <section id="Peso-ideal">
+            <h2>O que é peso ideal? </h2>
+            <p>
+                O <strong>peso ideal</strong> é a faixa de peso saudável para a sua altura, que ajuda a reduzir riscos de
+                doenças, como obesidade, diabetes e hipertensão. Embora o peso seja uma medida importante, também é crucial
+                considerar a <strong>composição corporal</strong>, que se refere à quantidade de gordura, músculo e água em
+                seu
+                corpo.
+
+                Por isso, o peso ideal não é o mesmo para todos. Consultar um nutricionista é a melhor forma de entender o que
+                é
+                mais adequado para o seu corpo.
+            </p>
+        </section>
+
+        <section id="peso-ideal2">
+            <h2>
+                Já pensou em usar uma calculadora de peso ideal?
+            </h2>
+            <p>
+                Calcular o <strong>peso ideal</strong> pode ser um bom ponto de partida para melhorar os seus hábitos de
+                saúde.
+                Embora o conceito de peso ideal varie de pessoa para pessoa, ferramentas como a calculadora de
+                <strong>IMC</strong> podem fornecer uma boa estimativa para saber se você está dentro de uma faixa saudável.
+
+                O peso ideal é aquele em que você se sente bem, com boa disposição e com os exames de saúde em dia. <strong>A
+                calculadora de peso ideal</strong> pode te ajudar a encontrar essa faixa e a definir metas realistas para
+                sua
+                saúde.
+            </p>
+        </section>
+
+        <section id="imc-ideal">
+            <h2>
+                Qual a relação do peso ideal com o IMC?
+            </h2>
+            <p>
+                O <strong>Índice de Massa Corporal (IMC)</strong> é uma ferramenta simples usada para determinar se você está
+                no
+                peso ideal para sua altura. O IMC pode ser um bom ponto de partida para entender se o seu peso está adequado,
+                mas é importante lembrar que ele não leva em conta a composição corporal (quanto de gordura ou músculo você
+                tem,
+                por exemplo).
+
+                Ao calcular seu IMC, você obtém uma ideia geral da sua saúde, mas para um diagnóstico mais preciso, é sempre
+                bom
+                realizar exames de rotina e consultar um nutricionista.
+            </p>
+        </section>
+
+        <section>
+            <h2>
+                Qual a importância de estar no peso ideal?
+            </h2>
+            <p>
+                Manter o <strong>peso ideal</strong> traz benefícios para a saúde física e mental. Um peso adequado ajuda a
+                reduzir o risco de várias condições de saúde, como doenças cardíacas, diabetes e hipertensão. Além disso, ter
+                um
+                peso saudável também melhora a autoestima e o bem-estar geral.
+
+                Manter o peso ideal reduz a carga sobre suas articulações, melhora a resistência física e até previne certos
+                tipos de câncer. Ajudar seu corpo a estar no peso saudável também pode proporcionar mais energia e qualidade
+                de
+                vida.
+            </p>
+        </section>
+
+        <section>
+            <h2>
+                Qual a fórmula usada para calcular o peso ideal?
+            </h2>
+            <p>
+                A fórmula para calcular o <strong>IMC</strong> é simples:
+
+                <strong>MC = peso (kg) ÷ (altura × altura em metros)</strong>
+
+                Por exemplo, se você tem 1,80m de altura e pesa 85kg, a conta seria:
+
+                <strong>85 ÷ (1,80 × 1,80) = 26,23</strong>
+
+                Esse valor se enquadra na faixa de <strong>sobrepeso</strong>, e é um bom momento para avaliar seus hábitos de
+                alimentação e atividades físicas.
+            </p>
+        </section>
+
+        <section>
+            <h2>
+                Como usar a calculadora de peso ideal?
+            </h2>
+            <p>
+                Para usar a <strong>calculadora de peso ideal</strong>, insira seu peso e altura nos campos correspondentes e
+                selecione seu gênero. Após clicar em <strong>Calcular</strong>, o resultado será gerado automaticamente.
+
+                Ao calcular seu IMC, você também verá a classificação dele, como "peso ideal", "sobrepeso", "obesidade", etc.
+                Esse é um bom primeiro passo para revisar seus hábitos e avaliar se você precisa fazer ajustes em sua dieta e
+                exercícios.
+            </p>
+        </section>
+
+    </article>
+    <div class="ads">
+      <!-- Aqui vai o código do AdSense futuramente -->
+      <p>[ Anúncio aparecerá aqui ]</p>
+    </div>
+   <script src="script.js"></script>
+</body>
+</html>

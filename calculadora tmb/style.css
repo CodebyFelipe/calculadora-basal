@@ -1,0 +1,231 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+      padding-top: 0;
+    }
+
+    /* Carrossel */
+    .carrossel {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slides {
+      display: flex;
+      width: 400%;
+      animation: slide 16s infinite;
+    }
+
+    .slides img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0%   { margin-left: 0; }
+      25%  { margin-left: -100%; }
+      50%  { margin-left: -200%; }
+      75%  { margin-left: -300%; }
+      100% { margin-left: 0; }
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin: 20px 0;
+    }
+
+    nav {
+      background-color: #2980b9;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.1em;
+      padding: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #3498db;
+      border-radius: 5px;
+    }
+
+    article {
+      width: 90%;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #2980b9;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1em;
+      margin-bottom: 15px;
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 30px auto;
+      background: linear-gradient(135deg, #eef2ff, #e0f7ff);
+      border-radius: 10px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      flex: 1;
+      padding: 20px;
+      background-color: #dbeafe;
+      border: 1px solid #60a5fa;
+      border-radius: 10px;
+      overflow: auto;
+      min-width: 300px;
+    }
+
+    .esquerda {
+      background-color: #fff;
+    }
+
+    .direita {
+      background: #fff;
+      color: white;
+    }
+
+    .direita h2 {
+      margin-bottom: 15px;
+      font-size: 1.2em;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 5px;
+    }
+
+    .formulariocalcular {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .grupo-campos {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .campo {
+      flex: 1;
+    }
+
+    label {
+      font-weight: bold;
+      font-size: 0.9em;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    button {
+      margin-top: 5px;
+      background-color: #2980b9;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #3498db;
+    }
+
+    #resultado {
+      background-color: #ecf0f1;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 1.1em;
+      color: #2c3e50;
+      margin-top: 10px;
+    }
+
+    .ads {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .ads p {
+      font-size: 1em;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      .grupo-campos {
+        flex-direction: column;
+      }
+
+      .box {
+        max-height: none;
+      }
+    }
+
+
